@@ -14,5 +14,5 @@
 	<project name="MontaVista-OpenSourceTechnology/meta-cloud-services.git" remote="github.com" path="layers/meta-cloud-services" revision="thud"/>
 	<project name="MontaVista-OpenSourceTechnology/meta-montavista-cgl.git" remote="github.com" path="layers/meta-montavista-cgl" revision="thud"/>
 	<project name="MontaVista-OpenSourceTechnology/meta-qcom.git" remote="github.com" path="layers/meta-qcom" revision="thud"/>
-	<project name="MontaVista-OpenSourceTechnology/opencgx-qualcomm-2.6" remote="github.com" path="." revision="master"/>
+	<project name="MontaVista-OpenSourceTechnology/opencgx-qualcomm" remote="github.com" path="." revision="master"/>
 </manifest>
