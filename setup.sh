@@ -28,36 +28,39 @@ mkdir -p $buildDir
 buildDir=$(readlink -f $buildDir)
 
 REPO_CONFIG="\
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/poky.git;branch=thud;layer=meta \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/poky.git;branch=thud;layer=meta-poky \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/poky.git;branch=thud;layer=meta-yocto-bsp \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-oe \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-python \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-filesystems \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-networking \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-webserver \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-clang.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-virtualization.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-qa.git;branch=thud;layer=meta-qa-framework \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-qa.git;branch=thud;layer=meta-qa-testsuites \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgx.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-perl \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-gnome \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-multimedia \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=thud;layer=meta-xfce \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-selinux.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-security.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-cgl.git;branch=thud;layer=meta-cgl-common \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-cloud-services.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-cloud-services.git;branch=thud;layer=meta-openstack \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgl.git;branch=thud \
-LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-qcom.git;branch=thud \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/poky.git;branch=dunfell;layer=meta \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/poky.git;branch=dunfell;layer=meta-poky \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/poky.git;branch=dunfell;layer=meta-yocto-bsp \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-oe \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-python \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-filesystems \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-networking \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-webserver \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-clang.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-virtualization.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-qa.git;branch=dunfell;layer=meta-qa-framework \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-qa.git;branch=dunfell;layer=meta-qa-testsuites \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgx.git;branch=dunfell;layer=qemu-bsp \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgx.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-perl \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-gnome \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-multimedia \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-openembedded.git;branch=dunfell;layer=meta-xfce \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-selinux.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-security.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-cgl.git;branch=dunfell;layer=meta-cgl-common \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-cloud-services.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-cloud-services.git;branch=dunfell;layer=meta-openstack \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-montavista-cgl.git;branch=dunfell \
+LAYER@https://github.com/MontaVista-OpenSourceTechnology/meta-qcom.git;branch=dunfell \
 MACHINE@dragonboard-820c \
 DISTRO@mvista-cgx \
 "
 TOPDIR=$(dirname $THIS_SCRIPT)
 buildtar=""
 URL=""
+BUILD_TOOLS_LOCATION=http://downloads.yoctoproject.org/releases/yocto/yocto-3.1/buildtools/
+buildtar=x86_64-buildtools-extended-nativesdk-standalone-3.1.sh
 
 for config in $REPO_CONFIG; do
     VAR=$(echo $config | cut -d @ -f 1)
@@ -73,16 +76,6 @@ export BUILD_TOOLS_LOCATION
 export buildtar
 $TOPDIR/bin/fetch-buildtools || $EXIT 1
 
-if which python 2>/dev/null >/dev/null; then 
-    PYTHON=python
-elif which python2 2>/dev/null >/dev/null; then 
-    PYTHON=python2
-elif which python3 2>/dev/null >/dev/null; then 
-    PYTHON=python3
-else
-    echo "Could not find system python, please install"
-    $EXIT 1
-fi
 source $TOPDIR/buildtools/environment-setup-*
 if [ "$?" != "0" ] ; then
    $EXIT 1
@@ -94,7 +87,12 @@ if [[ ("x$URLBASE" != "x") && ( "$HOST" = "staging.support.mvista.com" || "$HOST
    git config --global http.$URLBASE.cookiefile $($TOPDIR/bin/mvl-fetch -c $URLBASE)
 fi
 
-if [ ! -e $TOPDIR/.drop ] ; then
+if [ -z "$ALLOW_UPDATE" ] ; then
+    ALLOW_UPDATE=1
+fi
+
+
+if [ ! -e $TOPDIR/.drop -o "$ALLOW_UPDATE" = "1" ] ; then
    if [ ! -e $TOPDIR/.repo ] ; then
       pushd $TOPDIR 2>/dev/null 1>/dev/null
          git config pull.rebase True
@@ -193,7 +191,7 @@ for config in $REPO_CONFIG; do
           mkdir -p $TOPDIR/sources-export
           LSOURCE=$TOPDIR/sources/$(basename $TREE | sed s,.git,,)
           LSOURCE_EXPORT=$TOPDIR/sources-export/$(basename $TREE | sed s,.git,,)
-          if [ ! -e $TOPDIR/.drop ] ; then
+          if [ ! -e $TOPDIR/.drop -o "$ALLOW_UPDATE" = "1" ] ; then
               pushd $LSOURCE 2>/dev/null >/dev/null
                      git checkout $BRANCH || $EXIT 1
                      git pull 2>/dev/null >/dev/null
@@ -207,7 +205,7 @@ for config in $REPO_CONFIG; do
                  fi
               else
                  pushd $LSOURCE_EXPORT 2>/dev/null >/dev/null
-                     git fetch || $EXIT 1
+                     git fetch origin $BRANCH:$BRANCH || $EXIT 1
                  popd 2>/dev/null >/dev/null
               fi
           fi
@@ -255,14 +253,14 @@ fi
 export -n BB_NO_NETWORK
 if [ "$MAKEDROP" != "1" ] ; then
    # Temporary waiting for proper bitbake integration: https://patchwork.openembedded.org/patch/144806/
-   RELPATH=$($PYTHON -c "from os.path import relpath; print (relpath(\"$TOPDIR/layers\",\"$(pwd)\"))")
+   RELPATH=$(python -c "from os.path import relpath; print (relpath(\"$TOPDIR/layers\",\"$(pwd)\"))")
    sed -i conf/bblayers.conf -e "s,$TOPDIR/layers/,\${TOPDIR}/$RELPATH/,"
    
    if [ "$(readlink -f setup.sh)" = "$(readlink -f $TOPDIR/setup.sh)" ] ; then
       echo "Something went wrong. Exiting to prevent overwritting setup.sh"
       $EXIT 1
    fi
-   SCRIPT_RELPATH=$($PYTHON -c "from os.path import relpath; print (relpath(\"$TOPDIR\",\"`pwd`\"))")
+   SCRIPT_RELPATH=$(python -c "from os.path import relpath; print (relpath(\"$TOPDIR\",\"`pwd`\"))")
    cat > setup.sh << EOF
    if [ -n "\$BASH_SOURCE" ]; then
       THIS_SCRIPT=\$BASH_SOURCE
@@ -279,28 +277,31 @@ EOF
    rm -rf tmp-glibc
 else
    rm -rf tmp
+   cd $TOPDIR
    rm -rf $TOPDIR/buildtools
    touch $TOPDIR/.drop
-   rm -rf $TOPDIR/project
+   rm -rf $TOPDIR/$buildDir
 fi
-if [ "$EXIT" = "exit" ] ; then
-   echo
-   echo "=Setup Complete="
-   echo
-   echo "* Run the following to start building with your project:"
-   echo "source $buildDir/setup.sh"
-   echo "bitbake core-image-minimal"
-   echo
-else
-   echo
-   echo "=Setup Complete="
-   echo
-   echo "* To start building run the following:"
-   echo "bitbake core-image-minimal"
-   echo
-   echo "* To re-setup your build environment for your build later, run:"
-   echo "source $buildDir/setup.sh"
-   echo
+if [ "$MAKEDROP" != "1" ] ; then
+    if [ "$EXIT" = "exit" ] ; then
+        echo
+        echo "=Setup Complete="
+        echo
+        echo "* Run the following to start building with your project:"
+        echo "source $buildDir/setup.sh"
+        echo "bitbake core-image-minimal"
+        echo
+    else
+        echo
+        echo "=Setup Complete="
+        echo
+        echo "* To start building run the following:"
+        echo "bitbake core-image-minimal"
+        echo
+        echo "* To re-setup your build environment for your build later, run:"
+        echo "source $buildDir/setup.sh"
+        echo
+    fi
 fi
 echo "* To update your content sources run:"
 if [ "$(readlink -f $buildDir)" = "$(readlink -f $TOPDIR/project)" ] ; then

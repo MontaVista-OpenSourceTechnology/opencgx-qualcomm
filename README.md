@@ -1,4 +1,4 @@
-# Release repository for dragonboard-820c - 2.6 - thud
+# Release repository for dragonboard-820c
 
 Montavista Software, LLC. release of dragonboard-820c. 
 

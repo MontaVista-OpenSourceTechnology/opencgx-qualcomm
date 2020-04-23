@@ -72,7 +72,7 @@ echo $DOWNLOAD_DIR > $PROJECT_LOCATION/.download-dir
 export DL_DIR=$DOWNLOAD_DIR
 export BB_ENV_EXTRAWHITE="DL_DIR"
 source $PROJECT_LOCATION/setup.sh $BUILD_DIR
-bitbake -k -c fetchall $DEFAULT_SOURCE_TARGET  || exit 1
+bitbake -k --runall=fetch $DEFAULT_SOURCE_TARGET  || exit 1
 
 if [ "x$MIRROR_DIR" != "x" ] ; then
    echo -n "copying downloaded files to mirror(this can take some time)...."
