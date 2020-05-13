@@ -5,8 +5,8 @@ Montavista Software, LLC. release of dragonboard-820c.
 How to use:
 ==========
 ```
-git clone --recursive https://github.com/MontaVista-OpenSourceTechnology/opencgx-qualcomm-2.6
-cd opencgx-qualcomm-2.6
+git clone --recursive https://github.com/MontaVista-OpenSourceTechnology/opencgx-qualcomm
+cd opencgx-qualcomm
 source setup.sh
 ```
 Optionally, you can pass setup.sh a directory name to use instead of the
@@ -39,7 +39,7 @@ poky/oe-init-build-env script.
 directory layout:
 ================
 ```
-opencgx-qualcomm-2.6/
+opencgx-qualcomm/
        project - bitbake project for the dragonboard-820c project build
        buildtools - build tools to provide minimal build requirement for poky builds
        layers - layers for building dragonboard-820c project
